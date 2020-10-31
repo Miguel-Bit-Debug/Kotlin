@@ -12,14 +12,13 @@ fun main() {
     println("Número da conta $numeroConta")
     println("Saldo da conta $saldo")
 
-    if (saldo > 0.0) {
-        println("Conta é positiva")
-    } else if (saldo == 0.0) {
-        println("Conta é neutra")
-    } else if(saldo < 0.0) {
-        println("Conta é negativa")
-    } else {
-        println("Erro interno")
+    when {
+        saldo > 0.0 -> println("Conta é positiva")
+        saldo == 0.0 -> println("Conta é neutra")
+        saldo < 0.0 -> println("Conta é negativa")
+        else -> println("Erro interno")
+
+        
     }
 
 }
